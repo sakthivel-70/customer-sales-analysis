@@ -29,7 +29,7 @@ from sqlalchemy import create_engine
 import pandas as pd
 
 username = "root"
-password = quote_plus("sakthi@IT2264")
+password = quote_plus("*********")
 host = "127.0.0.1"   # safer than localhost
 port = 3306
 database = "sales_analysis"
@@ -44,4 +44,5 @@ df.to_sql(table_name, engine, if_exists="replace", index=False)
 # Read sample
 sample = pd.read_sql("SELECT * FROM sales_table LIMIT 10;", engine)
 print(sample)
+
 
